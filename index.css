@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    background-image: url('images/bg-desktop.svg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(91, 62, 196, 0.979);
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-rows: repeat(4,200px);
+    gap: 25px;
+    user-select: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.container > .logo {
+    grid-area: 1/1/2/-1;
+    display: flex;
+    align-items: center;
+}
+
+.container > .logo > i {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    color: #fff;
+}
+
+.container > .logo > h2 {
+    color: #fff;
+    margin: 2rem .5rem;
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+}
+
+.container > .landing {
+    grid-area: 2/1/4/4;
+    align-self: center;
+    justify-self: center;
+}
+
+.container > .landing > img{
+    width: 100%;
+}
+
+.container > .content {
+    grid-area: 2/4/4/-1;
+    color: #fff;
+    width: 100%;
+}
+
+.container > .content > h2 {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.container > .content > h2 + p {
+    font-size: 1.5rem;
+}
+
+.container > .content > span {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    color: #fff;
+    padding: 10px 50px;
+    border-radius: 15px;
+    cursor: pointer;
+    width: fit-content;
+    width: -moz-fit-content;
+    background-color: rgb(204, 82, 224);
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+}
+
+.container > .lists {
+    grid-area: 4/1/5/-1;
+    margin-top: 5.5rem;
+    margin-right: 4rem;
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+}
+
+.container > .lists > a  {
+    background-color: rgb(204, 82, 224);
+    margin-left: .5rem;
+    width: 50px;
+    height: 50px;
+    line-height: 60px;
+    text-align: center;
+    transition: .3s ease-in-out;
+}
+
+.container > .lists > a:hover {
+    transform: translateY(-10px);
+}
+
+.container > .lists a > i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+@media (max-width: 900px) {
+    .container > .landing {
+        grid-area: 2/1/4/-1 !important;
+
+    }
+    .container > .content { 
+        grid-area: 4/1/6/-1 !important;
+    }
+
+    .container > .lists {
+        grid-area: 6/1/7/-1 !important;
+        margin: 0  auto !important;
+
+    }
+}
+
+
+@media (max-width: 500px) {
+    .container {
+        grid-template-rows: repeat(4, 80px) !important;
+    }
+}
